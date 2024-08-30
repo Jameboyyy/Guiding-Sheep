@@ -1,3 +1,11 @@
+:root{
+  --text: #18150f;
+  --background: #fcfbfa;
+  --primary: #c3b192;
+  --secondary: #f5f5db;
+  --accent: #9eb186;
+}
+
 * {
   margin: 0;
   padding: 0;

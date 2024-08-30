@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Auth from "./components/auth";
+import AuthPage from "./pages/authPage";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
           {/* Default route */}
           <Route path="/" element={<Navigate to="/auth" />} />
           {/* Auth route */}
-          <Route path="/auth" element={<Auth />} />
+          <Route path="/auth" element={<AuthPage />} />
           {/* Catch-all route to handle undefined routes */}
           <Route path="*" element={<Navigate to="/auth" />} />
         </Routes>
