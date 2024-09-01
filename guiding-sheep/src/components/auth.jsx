@@ -1,18 +1,32 @@
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import './auth.css'
+import './auth.css';
 
 const Auth = () => {
     const { loginWithRedirect } = useAuth0();
     const [isSignUp, setIsSignUp ] = useState(true);
     const [showModal, setShowModal] = useState(false);
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        password: ''
+    });
 
-    // Handler to either sign up or log in based on the current state
+    // Handle input change
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    // Handle form submission
     const handleAuth = () => {
         if (isSignUp) {
-            loginWithRedirect({ screen_hint: 'signup'}); //Redirect to sign up
+            loginWithRedirect({ 
+                screen_hint: 'signup',
+                appState: { formData }
+            }); // Redirect to sign up
         } else {
-            loginWithRedirect(); // Redirect to log in
+            loginWithRedirect({ appState: { formData } }); // Redirect to log in
         }
     };
 
@@ -22,23 +36,58 @@ const Auth = () => {
 
     const handleContinueWithoutAccount = () => {
         setShowModal(true);
-    }
+    };
 
     const closeModal = () => {
         setShowModal(false);
-    }
+    };
 
     const proceedWithoutSaving = () => {
         setShowModal(false);
+        // Implement logic for proceeding without saving
+    };
 
-    }
+    // Handle Google Sign-In
+    const handleGoogleSignIn = () => {
+        loginWithRedirect({ connection: 'google-oauth2' });
+    };
 
     return(
         <div className='auth__form'>
             <h2 className='auth__btn-label'>{isSignUp ? 'Sign Up' : 'Login'}</h2>
+            
+            {isSignUp && (
+                <input 
+                    type="text" 
+                    name="username" 
+                    placeholder="Username" 
+                    value={formData.username} 
+                    onChange={handleInputChange} 
+                />
+            )}
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Email" 
+                value={formData.email} 
+                onChange={handleInputChange} 
+            />
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Password" 
+                value={formData.password} 
+                onChange={handleInputChange} 
+            />
+            
             <button onClick={handleAuth}>
                 {isSignUp ? 'Sign Up' : 'Log In'}
             </button>
+            
+            <button onClick={handleGoogleSignIn} className="google-signin-btn">
+                Sign in with Google
+            </button>
+            
             <p className='para__auth-form'>
                 {isSignUp ? 'Already have an account?' : 'Need an account?'}{' '}
                 <button onClick={toggleAuthMode} style={{ color: 'blue', border: 'none', background: 'none', cursor: 'pointer' }}>
