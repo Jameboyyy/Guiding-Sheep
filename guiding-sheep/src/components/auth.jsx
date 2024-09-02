@@ -19,7 +19,9 @@ const Auth = () => {
     };
 
     // Handle form submission
-    const handleAuth = () => {
+    const handleFormSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+
         if (isSignUp) {
             loginWithRedirect({ 
                 screen_hint: 'signup',
@@ -56,34 +58,36 @@ const Auth = () => {
         <div className='auth__form'>
             <h2 className='auth__btn-label'>{isSignUp ? 'Sign Up' : 'Login'}</h2>
             
-            {isSignUp && (
+            <form onSubmit={handleFormSubmit}>
+                {isSignUp && (
+                    <input 
+                        type="text" 
+                        name="username" 
+                        placeholder="Username" 
+                        value={formData.username} 
+                        onChange={handleInputChange} 
+                    />
+                )}
                 <input 
-                    type="text" 
-                    name="username" 
-                    placeholder="Username" 
-                    value={formData.username} 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    value={formData.email} 
                     onChange={handleInputChange} 
                 />
-            )}
-            <input 
-                type="email" 
-                name="email" 
-                placeholder="Email" 
-                value={formData.email} 
-                onChange={handleInputChange} 
-            />
-            <input 
-                type="password" 
-                name="password" 
-                placeholder="Password" 
-                value={formData.password} 
-                onChange={handleInputChange} 
-            />
-            
-            <button onClick={handleAuth}>
-                {isSignUp ? 'Sign Up' : 'Log In'}
-            </button>
-            
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Password" 
+                    value={formData.password} 
+                    onChange={handleInputChange} 
+                />
+                
+                <button type="submit">
+                    {isSignUp ? 'Sign Up' : 'Log In'}
+                </button>
+            </form>
+
             <button onClick={handleGoogleSignIn} className="google-signin-btn">
                 Sign in with Google
             </button>
