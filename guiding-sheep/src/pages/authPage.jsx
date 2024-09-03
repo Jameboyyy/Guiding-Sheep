@@ -3,7 +3,7 @@ import Auth from '../components/auth';
 
 const AuthPage = () => {
     return (
-        <section id='authPage'>
+        <section id='authPage' className='auth-page-layout'>
             <Auth />
         </section>
     );
