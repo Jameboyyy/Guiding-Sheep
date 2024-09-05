@@ -1,0 +1,43 @@
+nav {
+    background-color: var(--secondary);
+    width: 1920px;
+}
+
+.nav__container {
+    margin: 0 auto;
+    padding: 0;
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+.nav__left {
+    display: flex;
+    align-items: center;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+}
+
+.nav__brand {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.nav__lists {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list a {
+    text-decoration: none;
+}

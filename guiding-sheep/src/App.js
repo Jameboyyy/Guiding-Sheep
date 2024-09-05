@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import LandscapePage from "./pages/landscapePage";
 import AuthPage from "./pages/authPage";
 
 function App() {
@@ -8,11 +9,11 @@ function App() {
       <div className="App">
       <Routes>
           {/* Default route */}
-          <Route path="/" element={<Navigate to="/auth" />} />
+          <Route path="/" element={<LandscapePage />} />
+          {/* Catch-all route to handle undefined routes */}
+          <Route path="*" element={<Navigate to="/" />} />
           {/* Auth route */}
           <Route path="/auth" element={<AuthPage />} />
-          {/* Catch-all route to handle undefined routes */}
-          <Route path="*" element={<Navigate to="/auth" />} />
         </Routes>
       </div>
     </Router>
