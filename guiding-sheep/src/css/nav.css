@@ -1,16 +1,19 @@
 nav {
-    background-color: var(--secondary);
-    width: 1920px;
+    background-color: var(--background);
+    width: 100%;
+    position: relative;
+    border-bottom: 1px #b6b3af solid;
 }
 
 .nav__container {
     margin: 0 auto;
     padding: 0;
-    width: 1440px;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 12.5vh;
+    width: 100%;
 }
 
 .nav__left {
@@ -21,6 +24,11 @@ nav {
 .nav__right {
     display: flex;
     align-items: center;
+}
+
+.nav__img {
+    width: 50px;
+    height: auto;
 }
 
 .nav__brand {
@@ -38,6 +46,14 @@ nav {
     padding: 0;
 }
 
-.nav__list a {
+.nav__link {
+    text-decoration: none;
+}
+
+.nav__link:visited {
+    color: var(--text);
+}
+
+.nav__auth--btn {
     text-decoration: none;
 }

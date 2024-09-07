@@ -1,10 +1,11 @@
 import React from 'react';
+import Auth from '../components/auth';
 
 const AuthPage = () => {
     return (
-        <div>
-            
-        </div>
+        <section className="authPage">
+            <Auth />
+        </section>
     );
 }
 

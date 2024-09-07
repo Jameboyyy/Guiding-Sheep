@@ -10,8 +10,10 @@ const Auth = () => {
         process.env.REACT_APP_AUTH0_DOMAIN,
         {
             auth: {
-                redirectUrl: window.location.origin,
                 responstType: 'token_id_token',
+            },
+            authorizationParams: {
+                redirect_uri: window.location.origin
             },
             theme: {
                 primaryColor: '#c3b192',
@@ -27,6 +29,13 @@ const Auth = () => {
     const handleAuth0Login = () => {
         lock.show();
     };
+
+    const handleAuth0SignUp = () => {
+        lock.show({
+            initialScreen: 'signUp',
+            screen_hint: 'signup'
+        });
+    }
 
     const handleContinueWithoutSignIn = () => {
         setShowModal(true);
