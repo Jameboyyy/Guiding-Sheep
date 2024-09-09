@@ -7,10 +7,10 @@
     margin: 0 auto;
     padding: 0;
     background-color: var(--background);
-    height: 75vh;
+    height: 80vh;
     align-items: center;
     justify-content: center;
-    max-width: 1080px;
+    max-width: 1200px;
 }
 
 .landscape__left {
@@ -27,8 +27,37 @@
     font-size: 1.1rem;
     color: var(--text);
     line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .landscape__right {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landscape__img--container {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.landscape__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.landscape__btn {
+    background-color: var(--accent);
+    border: none;
+    color: var(--text);
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 30px;
 }
