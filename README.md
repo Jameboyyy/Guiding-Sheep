@@ -29,7 +29,7 @@ Whether you have questions about scripture, want to explore topics like prayer, 
 - **OpenAI API**: Powers the AI that responds to user queries with faith-based answers.
 
 ### Database
-- **MongoDB**: A NoSQL database used to store user data, chat history, and other relevant information.
+- **PostgreSQL**:
 
 ### Authentication
 - **JWT (JSON Web Tokens):** Provides secure token-based user authentication.
