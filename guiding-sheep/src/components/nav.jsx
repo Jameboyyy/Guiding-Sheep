@@ -47,10 +47,10 @@ const Nav = () => {
                     </div>
                     <ul className="nav__lists">
                         <li className="nav__list">
-                            <Link to="/why-gs-ai" className="nav__link">Why GS AI</Link>
+                            <Link to="/what-is-gs-ai" className="nav__link">What is GS AI</Link>
                         </li>
                         <li className="nav__list">
-                            <Link to="/what-is-gs-ai" className="nav__link">What Is GS AI</Link>                    
+                            <Link to="/why-gs-ai" className="nav__link">Why GS AI</Link>                    
                         </li>
                     </ul>
                 </div>

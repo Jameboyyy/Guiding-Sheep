@@ -7,10 +7,10 @@
     margin: 0 auto;
     padding: 0;
     background-color: var(--background);
-    height: 80vh;
+    height: 90vh;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 75%;
 }
 
 .landscape__left {
@@ -45,7 +45,7 @@
 }
 
 .landscape__img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     border-radius: 50%;
 }
