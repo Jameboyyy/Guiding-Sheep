@@ -1,18 +1,16 @@
 #whatGSAI__container {
     background-color: var(--background);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 .whatGSAI__content {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     max-width: 75%;
+    margin: 10% auto;
 }
 
 .whatGSAI__title {
@@ -32,3 +30,6 @@
     text-align: center;
 }
 
+.whatGSAI__img {
+    
+}

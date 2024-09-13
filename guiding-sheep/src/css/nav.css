@@ -32,6 +32,19 @@ nav {
 }
 
 .nav__brand {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav__brand:visited {
+    color: var(--text);
+}
+
+.nav__brand--name {
+    cursor: pointer;
+}
+
+.nav__brand {
     display: flex;
     align-items: center;
     margin-right: 40px;
@@ -50,6 +63,7 @@ nav {
 
 .nav__link {
     text-decoration: none;
+    color: var(--text);
 }
 
 .nav__link:visited {
@@ -58,7 +72,6 @@ nav {
 
 .nav__auth--btn {
     text-decoration: none;
-
 }
 
 .nav__log-in--btn {

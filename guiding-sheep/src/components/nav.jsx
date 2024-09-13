@@ -41,16 +41,19 @@ const Nav = () => {
         <nav>
             <div className="nav__container">
                 <div className="nav__left">
-                    <div className="nav__brand">
-                        <img src={sheepImg} alt="" className="nav__img" />
-                        <h1 className="nav__brand--name">GuidingSheep.ai</h1>
-                    </div>
+                        <a href="/" className="nav__brand">
+                            <img src={sheepImg} alt="" className="nav__img" />
+                            <h1 className="nav__brand--name">GuidingSheep.ai</h1>
+                        </a>
                     <ul className="nav__lists">
                         <li className="nav__list">
-                            <Link to="/what-is-gs-ai" className="nav__link">What is GS AI</Link>
+                            <a href="#whatGSAI__container" className="nav__link">What is GS AI</a>
                         </li>
                         <li className="nav__list">
-                            <Link to="/why-gs-ai" className="nav__link">Why GS AI</Link>                    
+                            <a href="#whyGSAI__container" className="nav__link"> Why GS AI</a>
+                        </li>
+                        <li className="nav__list">
+                            <Link to="/pricing" className="nav__link">Pricing</Link>
                         </li>
                     </ul>
                 </div>
