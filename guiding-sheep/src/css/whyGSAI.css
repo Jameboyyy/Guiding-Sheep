@@ -1,3 +1,19 @@
 #whyGSAI__container {
-    
+    background-color: var(--background);
+    height: 100vh;
+    display: flex;
+}
+
+.whyGSAI__content {
+    text-align: center;
+    max-width: 75%;
+    margin: 10% auto;
+    flex-direction: column;
+}
+
+.whyGSAI__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: var(--text);
+    margin-bottom: 20px;
 }

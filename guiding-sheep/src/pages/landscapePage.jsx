@@ -2,6 +2,7 @@ import React from 'react';
 import Landscape from '../components/landscape';
 import Nav from '../components/nav';
 import WhatGSAI from '../components/whatGSAI';
+import WhyGSAI from '../components/whyGSAI';
 
 const LandscapePage = () => {
     return (
@@ -9,6 +10,7 @@ const LandscapePage = () => {
             <Nav />
             <Landscape />
             <WhatGSAI />
+            <WhyGSAI />
         </section>
     );
 }
