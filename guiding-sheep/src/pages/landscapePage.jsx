@@ -3,6 +3,7 @@ import Landscape from '../components/landscape';
 import Nav from '../components/nav';
 import WhatGSAI from '../components/whatGSAI';
 import WhyGSAI from '../components/whyGSAI';
+import Pricing from '../components/pricing';
 
 const LandscapePage = () => {
     return (
@@ -11,6 +12,7 @@ const LandscapePage = () => {
             <Landscape />
             <WhatGSAI />
             <WhyGSAI />
+            <Pricing />
         </section>
     );
 }

@@ -15,5 +15,17 @@
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
     color: var(--text);
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+}
+
+.whyGSAI__paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }

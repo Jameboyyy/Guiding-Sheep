@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/nav.css'
 import Auth0Lock from 'auth0-lock';
-import { Link }from 'react-router-dom';
 import sheepImg from '../assets/brownsheepTrans.png'
 
 const Nav = () => {
@@ -53,7 +52,7 @@ const Nav = () => {
                             <a href="#whyGSAI__container" className="nav__link"> Why GS AI</a>
                         </li>
                         <li className="nav__list">
-                            <Link to="/pricing" className="nav__link">Pricing</Link>
+                            <a href="#pricing__container" className="nav__link">Pricing</a>
                         </li>
                     </ul>
                 </div>
